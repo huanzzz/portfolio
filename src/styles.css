@@ -1,0 +1,13 @@
+@import "tailwindcss";
+/* styles/tailwind.css */
+@import "./typography.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.typography {
+    font-size: var(--text-base);
+    color: var(--color-gray-700);
+  }
+
