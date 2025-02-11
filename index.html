@@ -1,137 +1,175 @@
 <!doctype html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="/src/styles.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="styles.css" rel="stylesheet">
 
   <style>
     /* 添加自定义 CSS 来实现向下滚动时的缩放效果 */
     .navbar {
-        transition: all 0.7s ease-in-out;
+      transition: all 0.7s ease-in-out;
     }
+
     .navbar.shrink {
-        background-color: rgba(255, 255, 255, 0.9);
-        padding: 0.5rem 1rem;
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 0.5rem 1rem;
     }
 
     /* 添加缩放动画 */
     @keyframes scale-up {
-            0% {
-                transform: scale(0.5);
-                opacity: 0;
-            }
-            100% {
-                transform: scale(1);
-                opacity: 1;
-            }
-        }
+      0% {
+        transform: scale(0.5);
+        opacity: 0;
+      }
 
-        .animate-scale-up {
-            animation: scale-up 1s ease-out forwards;
-        }
-</style>
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .animate-scale-up {
+      animation: scale-up 1s ease-out forwards;
+    }
+
+    /* 用于处理菜单弹出动画的过渡效果 */
+    .transition-height {
+      transition: height 0.3s ease;
+    }
+  </style>
 
 </head>
 
-<body class="bg-gray-100 flex items-center justify-center min-h-screen">
-  <nav id="navbar" class="navbar fixed top-0 left-0 right-0 bg-white shadow-md p-2 z-10">
-    <div class="container mx-auto flex justify-between items-center">
-        <!-- Logo -->
-        <div id="logo" class="text-xl font-bold pl-10">
-          <img id="logo" src="img/logo.png" alt="Logo" class="h-10 w-auto">
+<body class="bg-gray-100 flex min-h-screen">
+
+  <nav id="navbar" class="fixed w-full transition-all duration-300 bg-white shadow-lg">
+    <div class="max-w-7xl mx-auto px-10">
+      <div class="flex justify-between items-center h-16">
+        <!-- Logo和网站名称 -->
+        <div class="flex items-center">
+          <img class="h-8 w-auto" src="img/logo.png" alt="Logo">
+          <span class="ml-2 text-xl font-bold">Huan's protfolio</span>
         </div>
-        
-        <!-- Hamburger Menu -->
-        <div class="lg:hidden">
-          <button id="menu-button" class="text-gray-700 focus:outline-none">
-              <!-- SVG for hamburger icon -->
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-              </svg>
+
+        <!-- 桌面端菜单 -->
+        <div class="hidden md:flex space-x-4">
+          <a href="#" class="text-gray-700 hover:text-blue-500 px-3 py-2">Home</a>
+          <a href="#" class="text-gray-700 hover:text-blue-500 px-3 py-2">Projects</a>
+          <a href="#" class="text-gray-700 hover:text-blue-500 px-3 py-2">About me</a>
+          <a href="#" class="text-gray-700 hover:text-blue-500 px-3 py-2">Contact!</a>
+        </div>
+
+        <!-- 移动端菜单按钮 -->
+        <div class="md:hidden">
+          <button id="menu-btn" class="text-gray-700 hover:text-blue-500">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
           </button>
         </div>
+      </div>
 
-        <!-- Navigation Links -->
-        <div class="hidden md:flex space-x-10 pr-10">
-            <a href="#" class="text-gray-700 hover:text-blue-500">Home</a>
-            <a href="#" class="text-gray-700 hover:text-blue-500">About</a>
-            <a href="#" class="text-gray-700 hover:text-blue-500">Contact</a>
-        </div>
+      <!-- 移动端菜单内容 -->
+      <div id="mobile-menu" class="hidden md:hidden pb-4">
+        <a href="#" class="block text-gray-700 hover:text-blue-500 px-3 py-2">首页</a>
+        <a href="#" class="block text-gray-700 hover:text-blue-500 px-3 py-2">关于</a>
+        <a href="#" class="block text-gray-700 hover:text-blue-500 px-3 py-2">服务</a>
+        <a href="#" class="block text-gray-700 hover:text-blue-500 px-3 py-2">联系我们</a>
+      </div>
     </div>
   </nav>
-<div class="container mx-auto">
-  <div class="bg-white  w-full p-0 flex flex-col md:flex-row md:space-x-0 mt-0">
-        <!-- 左侧个人照片 -->
-        <div class="flex-1 flex justify-center items-center mb-4 md:mb-0">
-          <img src="img/profilephoto.png" alt="profilephoto" class="w-80 h-auto animate-scale-up">
-        </div>
 
-        <!-- 右侧欢迎语 -->
-        <div class="flex-1 md:pr-6 flex items-center justify-center h-screen">
-          <div class="space-y-4 max-w-md">
-            <div class="flex items-center space-x-2">
-              <h1 class="text-2xl font-bold">Hej! I'm Huan Wang</h1>
-            </div>
-            <p class="mt-4 text-gray-700">
-              欢迎来到我的作品集！在这里，你将看到我在设计、开发和艺术创作方面的一些作品。希望你喜欢！
-            </p>
+  <div class="container mx-auto">
+    <div class="bg-white  w-full p-0 flex flex-col md:flex-row md:space-x-0 mt-0">
+      <!-- 左侧个人照片 -->
+      <div class="flex-1 flex justify-center items-center mb-4 md:mb-0">
+        <img src="img/profilephoto.png" alt="profilephoto" class="w-80 h-auto animate-scale-up">
+      </div>
+
+      <!-- 右侧欢迎语 -->
+      <div class="flex-1 md:pr-6 flex items-center justify-center h-screen">
+        <div class="space-y-4 max-w-md">
+          <div class="flex items-center space-x-2">
+            <h1 class="text-2xl font-bold">Hej! I'm Huan Wang</h1>
           </div>
+          <p class="mt-4 text-gray-700">
+            欢迎来到我的作品集！在这里，你将看到我在设计、开发和艺术创作方面的一些作品。希望你喜欢！
+          </p>
         </div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-3 ml-16 mr-16">
+      <!-- 项目1 -->
+      <div class="bg-white p-6 rounded-lg shadow-lg hover:ring-2 hover:ring-indigo-300 cursor-pointer"
+        onclick="openProject('project1.html')">
+        <img src="img/project.png" alt="Project 1"
+          class="w-full h-auto object-cover rounded-lg transition-all duration-300 hover:rounded-full">
+        <h2 class="mt-4 text-xl font-semibold text-gray-800 transition-colors duration-500 hover:text-indigo-600">项目名称1
+        </h2>
+        <p class="text-gray-600 mt-2">这是项目1的简介。</p>
+      </div>
+      <!-- 项目2 -->
+      <div class="bg-white p-6 rounded-lg shadow-lg hover:ring-2 hover:ring-indigo-300 cursor-pointer"
+        onclick="openProject('project1.html')">
+        <img src="img/project.png" alt="Project 1"
+          class="w-full h-auto object-cover rounded-lg transition-all duration-300 hover:rounded-full">
+        <h2 class="mt-4 text-xl font-semibold text-gray-800 transition-colors duration-500 hover:text-indigo-600">项目名称2
+        </h2>
+        <p class="text-gray-600 mt-2">这是项目2的简介。</p>
+      </div>
+      <!-- 项目3 -->
+      <div class="bg-white p-6 rounded-lg shadow-lg hover:ring-2 hover:ring-indigo-300">
+        <img src="project3.jpg" alt="Project 3"
+          class="w-full h-48 object-cover rounded-lg transition-all duration-300 hover:rounded-full">
+        <h2 class="mt-4 text-xl font-semibold text-gray-800 transition-colors duration-300 hover:text-indigo-600">项目名称3
+        </h2>
+        <p class="text-gray-600 mt-2">这是项目3的简介。</p>
+      </div>
+      <!-- 项目4 -->
+      <div class="bg-white p-6 rounded-lg shadow-lg hover:ring-2 hover:ring-indigo-300">
+        <img src="project4.jpg" alt="Project 4"
+          class="w-full h-48 object-cover rounded-lg transition-all duration-300 hover:rounded-full">
+        <h2 class="mt-4 text-xl font-semibold text-gray-800 transition-colors duration-300 hover:text-indigo-600">项目名称4
+        </h2>
+        <p class="text-gray-600 mt-2">这是项目4的简介。</p>
+      </div>
+    </div>
+
   </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-3 ml-16 mr-16">
-    <!-- 项目1 -->
-    <div class="bg-white p-6 rounded-lg shadow-lg hover:ring-2 hover:ring-indigo-300 cursor-pointer" onclick="openProject('project1.html')">
-        <img src="img/project.png" alt="Project 1" class="w-full h-auto object-cover rounded-lg transition-all duration-300 hover:rounded-full">
-        <h2 class="mt-4 text-xl font-semibold text-gray-800 transition-colors duration-500 hover:text-indigo-600">项目名称1</h2>
-        <p class="text-gray-600 mt-2">这是项目1的简介。</p>
-    </div>
-    <!-- 项目2 -->
-    <div class="bg-white p-6 rounded-lg shadow-lg hover:ring-2 hover:ring-indigo-300 cursor-pointer" onclick="openProject('project1.html')">
-      <img src="img/project.png" alt="Project 1" class="w-full h-auto object-cover rounded-lg transition-all duration-300 hover:rounded-full">
-      <h2 class="mt-4 text-xl font-semibold text-gray-800 transition-colors duration-500 hover:text-indigo-600">项目名称2</h2>
-      <p class="text-gray-600 mt-2">这是项目2的简介。</p>
-    </div>
-    <!-- 项目3 -->
-    <div class="bg-white p-6 rounded-lg shadow-lg hover:ring-2 hover:ring-indigo-300">
-        <img src="project3.jpg" alt="Project 3" class="w-full h-48 object-cover rounded-lg transition-all duration-300 hover:rounded-full">
-        <h2 class="mt-4 text-xl font-semibold text-gray-800 transition-colors duration-300 hover:text-indigo-600">项目名称3</h2>
-        <p class="text-gray-600 mt-2">这是项目3的简介。</p>
-    </div>
-    <!-- 项目4 -->
-    <div class="bg-white p-6 rounded-lg shadow-lg hover:ring-2 hover:ring-indigo-300">
-        <img src="project4.jpg" alt="Project 4" class="w-full h-48 object-cover rounded-lg transition-all duration-300 hover:rounded-full">
-        <h2 class="mt-4 text-xl font-semibold text-gray-800 transition-colors duration-300 hover:text-indigo-600">项目名称4</h2>
-        <p class="text-gray-600 mt-2">这是项目4的简介。</p>
-    </div>
-</div>
 
-</div>
-
-
-<script>
-    // JavaScript to handle navbar hiding on scroll down
-    let lastScrollY = window.scrollY;
+  <script>
+    // 处理导航栏滚动效果
+    let lastScroll = 0;
     const navbar = document.getElementById('navbar');
 
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > lastScrollY) {
-            navbar.style.top = '-80px'; // 隐藏导航栏
-        } else {
-            navbar.style.top = '0';
-        }
-        lastScrollY = window.scrollY;
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset;
+
+      if (currentScroll > lastScroll) {
+        // 向下滚动
+        navbar.style.transform = 'translateY(-100%)';
+      } else {
+        // 向上滚动
+        navbar.style.transform = 'translateY(0)';
+      }
+
+      lastScroll = currentScroll;
     });
 
-    // JavaScript to handle hamburger menu toggle
-    const menuButton = document.getElementById('menu-button');
-    const menu = document.getElementById('menu');
+    // 处理移动端菜单切换
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
 
-    menuButton.addEventListener('click', function() {
-        menu.classList.toggle('hidden');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
     });
-</script>
+  </script>
 
 </body>
+
 </html>
