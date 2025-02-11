@@ -6,7 +6,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>响应式导航栏</title>
 </head>
-<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+<body class="bg-gray-100 flex min-h-screen">
     <nav id="navbar" class="fixed w-full transition-all duration-300 bg-white shadow-lg">
         <div class="max-w-7xl mx-auto px-4">
             <div class="flex justify-between items-center h-16">
@@ -44,13 +44,37 @@
         </div>
     </nav>
 
-    <!-- 页面内容 -->
-    <div class="pt-16">
-        <!-- 添加足够的内容使页面可滚动 -->
-        <div class="h-screen bg-gray-100">
-            <!-- 页面内容 -->
+    <div class="container mx-auto">
+        <!-- 主要内容区域 使用 flex 布局 -->
+        <div class="flex flex-col-reverse md:flex-row items-center justify-center gap-8 md:gap-16">
+          
+          <!-- 个人简介部分 -->
+          <div class="w-full md:w-1/2 space-y-4">
+            <h1 class="space-y-2 text-3xl md:text-4xl font-bold text-gray-800">
+              你的名字
+            </h1>
+            <h1 class="space-y-2 text-3xl md:text-4xl font-bold text-gray-800">
+                你的名字
+              </h1>
+            
+            <p class="text-lg text-gray-600 leading-relaxed">
+              这里是你的个人简介。可以描述你的专业背景、技能特长或职业目标。
+              文字可以适当换行，使用 leading-relaxed 让行间距更舒适。
+            </p>
+            
+            <!-- 可以添加一个联系按钮 -->
+            <button class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+              联系我
+            </button>
+          </div>
+          
+          <!-- 照片部分 -->
+          <div class="flex-1 flex justify-center items-center mb-4 md:mb-0">
+            <img src="img/profilephoto.png" alt="profilephoto" class="w-80 h-auto animate-scale-up">
+          </div>
+          
         </div>
-    </div>
+      </div>
 
     <script>
         // 处理导航栏滚动效果
