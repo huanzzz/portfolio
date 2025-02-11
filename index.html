@@ -57,7 +57,7 @@
         <!-- 桌面端菜单 -->
         <div class="hidden md:flex space-x-4">
           <a href="#" class="text-gray-700 hover:text-blue-500 px-3 py-2">Home</a>
-          <a href="#" class="text-gray-700 hover:text-blue-500 px-3 py-2">Project</a>
+          <a href="#project" class="text-gray-700 hover:text-blue-500 px-3 py-2">Project</a>
           <a href="#" class="text-gray-700 hover:text-blue-500 px-3 py-2">About me</a>
           <a href="#" class="text-gray-700 hover:text-blue-500 px-3 py-2">Contact!</a>
         </div>
@@ -75,7 +75,7 @@
       <!-- 移动端菜单内容 -->
       <div id="mobile-menu" class="hidden md:hidden pb-4">
         <a href="#" class="text-gray-700 hover:text-blue-500 px-3 py-2">Home</a>
-        <a href="#" class="text-gray-700 hover:text-blue-500 px-3 py-2">Project</a>
+        <a href="#project" class="text-gray-700 hover:text-blue-500 px-3 py-2">Project</a>
         <a href="#" class="text-gray-700 hover:text-blue-500 px-3 py-2">About me</a>
         <a href="#" class="text-gray-700 hover:text-blue-500 px-3 py-2">Contact!</a>
       </div>
@@ -84,28 +84,32 @@
 
   <main class="container mx-auto pt-20">
     <!-- Welcome banner -->
-    <div class="w-full flex-col-reverse p-0 flex md:flex-row md:space-x-0 mt-0 mb-5">
+    <div class="w-full max-w-6xl mx-auto flex-col-reverse p-0 flex md:flex-row mt-0 mb-5">
 
       <!-- Introduction -->
       <div class="w-full md:w-1/2 flex items-center justify-center py-8 md:py-0">
-        <div class="space-y-4 max-w-md">
+        <div class="space-y-20  max-w-md">
           <div class="space-y-2 items-center">
             <h1 class="text-2xl font-bold">Hej!</h1>
             <h1 class="text-2xl font-bold">I'm Huan Wang</h1>
+            <p class="pt-6">
+              欢迎来到我的作品集！在这里，你将看到我在设计、开发和艺术创作方面的一些作品。希望你喜欢！
+            </p>
           </div>
-          <p class="mt-4 text-gray-700">
-            欢迎来到我的作品集！在这里，你将看到我在设计、开发和艺术创作方面的一些作品。希望你喜欢！
-          </p>
+
         </div>
       </div>
 
       <!-- photo -->
-      <div class="flex-1 flex justify-center items-center mb-8 md:mb-0">
-        <img src="img/profilephoto.png" alt="profilephoto" class="w-80 h-auto animate-scale-up object-contain">
+      <div class="flex-1 md:w-1/2 flex justify-center items-center mb-8 md:mb-0">
+        <img 
+          src="img/profilephoto.png" 
+          alt="profilephoto" 
+          class="w-60 md:w-80 lg:w-90 mx-w-2xl h-auto animate-scale-up object-contain">
       </div>
     </div>
 
-    <div>
+    <div id="project">
       <!-- Grid title -->
       <div class="flex items-center justify-center mt-14">
         <h1 class="text-2xl font-bold "> Project</h1>
