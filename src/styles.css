@@ -72,6 +72,24 @@ nav {
     color: #2d3748;
 }
 
+.detial-title1 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    position:sticky;
+    top:8px;
+}
+
+.detial-title2{
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.detail-content{
+    color: #4a5568;
+    line-height: leading-relaxed;
+    margin-bottom: 20px;
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
     .nav-list {
