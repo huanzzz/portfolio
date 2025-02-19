@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="./src/styles.css" rel="stylesheet">
+  <link href="./styles.css" rel="stylesheet">
 
   <style>
     /* 添加自定义 CSS 来实现向下滚动时的缩放效果 */
@@ -102,9 +102,7 @@
 
       <!-- photo -->
       <div class="flex-1 md:w-1/2 flex justify-center items-center mb-8 md:mb-0">
-        <img 
-          src="img/profilephoto.png" 
-          alt="profilephoto" 
+        <img src="img/profilephoto.png" alt="profilephoto"
           class="w-60 md:w-80 lg:w-90 mx-w-2xl h-auto animate-scale-up object-contain">
       </div>
     </div>
@@ -117,17 +115,20 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-14 mt-10 ml-16 mr-16">
         <!-- 项目1 -->
-        <div class="bg-white p-6 rounded-lg shadow-lg hover:ring-2 hover:ring-indigo-300 cursor-pointer"
-          onclick="openProject('project1.html')">
-          <div class="">
-            <img src="img/project.png" alt="Project 1"
-              class="w-full h-auto object-cover rounded-lg transition-all duration-300 hover:scale-105">
+        <a href="stock-app.html">
+          <div class="bg-white p-6 rounded-lg shadow-lg hover:ring-2 hover:ring-indigo-300 cursor-pointer"
+            onclick="openProject('project1.html')">
+            <div class="">
+              <img src="img/project.png" alt="Project 1"
+                class="w-full h-auto object-cover rounded-lg transition-all duration-300 hover:scale-105">
+            </div>
+            <h2 class="mt-4 text-xl font-semibold text-gray-800 transition-colors duration-500 hover:text-indigo-600">
+              项目名称1
+            </h2>
+            <p class="text-gray-600 mt-2">这是项目1的简介。</p>
           </div>
-          <h2 class="mt-4 text-xl font-semibold text-gray-800 transition-colors duration-500 hover:text-indigo-600">
-            项目名称1
-          </h2>
-          <p class="text-gray-600 mt-2">这是项目1的简介。</p>
-        </div>
+        </a>
+        
         <!-- 项目2 -->
         <div class="bg-white p-6 rounded-lg shadow-lg hover:ring-2 hover:ring-indigo-300 cursor-pointer"
           onclick="openProject('project1.html')">
