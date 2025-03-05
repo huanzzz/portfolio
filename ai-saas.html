@@ -115,8 +115,8 @@
                         <h4 class="detial-title2">1. Train module with validated corpus data</h4>
                         <p class="detail-content">
                             The requirement of training data:<br>
-                            -  avoid conflict and confuse corpus in module training;<br>
-                            -  reduce overly similar questions.
+                            - avoid conflict and confuse corpus in module training;<br>
+                            - reduce overly similar questions.
                         </p>
                     </div>
 
@@ -156,11 +156,11 @@
 
                     <div class="p-0">
                         <!-- Subsection Title -->
-                        
+
 
                         <div class="flex flex-col md:flex-row">
                             <!-- 左侧文字列 -->
-                            
+
                             <div class="w-full md:w-1/2 p-4">
                                 <h4 class="detial-title2"> 4. Annotation flow</h4>
                                 <p>The annotate flow is that examine the intent classification firstly, if its a QA
@@ -172,120 +172,258 @@
                                 <img src="img/pj2/annotate flow.png" alt="annotate flow" class="w-5/6 h-auto ">
                             </div>
 
-                            
+
                         </div>
 
                         <div class="relative w-full max-w-4xl mx-auto">
                             <!-- 轮播图容器 -->
                             <div class="overflow-hidden relative rounded-lg shadow-lg">
-                              <!-- 轮播图片容器 -->
-                              <div id="slider-container" class="flex transition-transform duration-500 ease-in-out">
-                                <!-- 轮播图片 -->
-                                <div class="min-w-full">
-                                  <img src="/img/pj2/annoflow1.png" class="w-full h-auto object-cover" alt="Portfolio Image 1">
+                                <!-- 轮播图片容器 -->
+                                <div id="slider-container" class="flex transition-transform duration-500 ease-in-out">
+                                    <!-- 轮播图片 -->
+                                    <div class="min-w-full">
+                                        <img src="/img/pj2/annoflow1.png" class="w-full h-auto object-cover"
+                                            alt="Portfolio Image 1">
+                                    </div>
+                                    <div class="min-w-full">
+                                        <img src="/img/pj2/annoflow2.png" class="w-full h-auto object-cover"
+                                            alt="Portfolio Image 2">
+                                    </div>
+
                                 </div>
-                                <div class="min-w-full">
-                                  <img src="/img/pj2/annoflow2.png" class="w-full h-auto object-cover" alt="Portfolio Image 2">
-                                </div>
-                         
-                              </div>
-                              
-                              <!-- 左箭头 -->
-                              <button id="prev-btn" class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-2 rounded-full shadow-md transition-all">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                                </svg>
-                              </button>
-                              
-                              <!-- 右箭头 -->
-                              <button id="next-btn" class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-2 rounded-full shadow-md transition-all">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                                </svg>
-                              </button>
+
+                                <!-- 左箭头 -->
+                                <button id="prev-btn"
+                                    class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-2 rounded-full shadow-md transition-all">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M15 19l-7-7 7-7" />
+                                    </svg>
+                                </button>
+
+                                <!-- 右箭头 -->
+                                <button id="next-btn"
+                                    class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-2 rounded-full shadow-md transition-all">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 5l7 7-7 7" />
+                                    </svg>
+                                </button>
                             </div>
-                            
+
                             <!-- 页码指示器 -->
                             <div class="flex justify-center mt-4 space-x-2" id="pagination">
-                              <button class="w-3 h-3 rounded-full bg-gray-900" data-index="0"></button>
-                              <button class="w-3 h-3 rounded-full bg-gray-300" data-index="1"></button>
-                              
+                                <button class="w-3 h-3 rounded-full bg-gray-900" data-index="0"></button>
+                                <button class="w-3 h-3 rounded-full bg-gray-300" data-index="1"></button>
+
                             </div>
-                          </div>
+                        </div>
+                    </div>
+                    <div class="md:col-span-3 space-y-6 mb-5">
+                        <div class="p-0">
+                            <h4 class="detial-title2"> 5. The key indicators of Q&A System</h4>
+                            <p class="detail-content">
+                                To evaluate the performance of Q&A System, we need to define the indicators to analyze
+                                on these aspects:<br>
+                                - How does the AI module perform in accuracy<br>
+                                - How much it can be improved by supplementing the corpus base<br>
+                                <br>
+                                The AI applies classification module to predict users' intents. Accuracy, precision, and
+                                recall help evaluate the quality of classification models in machine learning.
+                            </p>
+
+
+                            <div class="mt-0 ">
+                                <p class="mb-0 detail-content">
+                                    <strong>Intent Accuracy</strong> shows how often a classification ML model is
+                                    correct overall.
+                                </p>
+                                <img src="./img/pj2/metrics2.png" alt="metrics-intent accuracy" class="w-80% mb-5 ">
+                            </div>
+
+                            <div class="mt-0 ">
+                                <p class="mb-0 detail-content">
+                                    <strong>Intent Recall</strong> shows whether an ML model can find all objects of the
+                                    target class.
+                                </p>
+                                <img src="./img/pj2/metrics3.png" alt="metrics-intent recall" class="w-80% mb-5 ">
+                            </div>
+
+                        </div>
                     </div>
 
+
                 </div>
+
+
+
+
+
+            </div>
+
+            <!-- Iteration -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <div class="md:col-span-1">
+                    <h3 class="text-xl font-semibold sticky top-8">Iteration</h3>
+                </div>
+                <div class="md:col-span-3">
+                    <p class="detail-content">
+                        After launched the first version, we collect valuable feedback from clients. Through analyzed
+                        their feedback and behavior data, we made an iteration.
+                    </p>
+
+                    <div class="p-0">
+                        <h4 class="detial-title2">1. Reduce repetitive work</h4>
+                        <p class="detail-content">
+                            The system selected samples from conversation log randomly, leading to a plenty of similar
+                            questions in the task. It’s not productive to let annotators deal with these similar
+                            questions for many times. So I
+                            <strong>reduced the repetitive by clustering questions with high similarity, and only select
+                                a few from the cluster.</strong>
+                        </p>
+                    </div>
+
+                    <div class="p-0">
+                        <h4 class="detial-title2">2. Simplify annotation flow</h4>
+                        <p class="detail-content">
+                            If the questions are not random distributed, then it can't evaluate accurately. So I
+                            separated annotation into two types tasks — improvement, evaluation.
+                        </p>
+
+                        <div class="flex mt-0 mb-0 justify-center">
+                            <img src="./img/pj2/iteration1.png" alt="result" class="w-70% mb-5 ">
+                        </div>
+                    </div>
+
+                    <div class="p-0">
+                        <h4 class="detial-title2">3. Add missing corpus with efficiency</h4>
+                        <p class="detail-content">
+                            Cluster the similar questions, and add it once in an Excel sheet. It saves a plenty of time
+                            to edit while annotating. And it also reduce repetitive work.
+                        </p>
+
+                        <div class="flex mt-0 mb-0 justify-center">
+                            <img src="./img/pj2/Question Cluster excel.png" alt="result" class="w-70% mb-5 ">
+                        </div>
+                    </div>
+
+                    <div class="p-0">
+                        <h4 class="detial-title2">4. Refer to context of the conversation</h4>
+                        <p class="detail-content">
+                            Sometimes annotators need to know the context of the question. So we provide an access refer
+                            to the whole conversation of this session.
+                        </p>
+
+                        <div class="flex mt-0 mb-0 justify-center">
+                            <img src="./img/pj2/iteration2.png" alt="result" class="w-70% mb-5 ">
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+            <!-- Final work -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <div class="md:col-span-1">
+                    <h3 class="text-xl font-semibold sticky top-8">The final design work</h3>
+                </div>
+                <div class="md:col-span-3">
+                    <img src="./img/pj2/SaaS UX.png" alt="result" class="w-70% mb-5 ">
+
+
+
+                </div>
+
+            </div>
+
+            <!-- Result -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <div class="md:col-span-1">
+                    <h3 class="text-xl font-semibold sticky top-8">Result</h3>
+                </div>
+                <div class="md:col-span-3">
+                    <p>
+                        The annotation system helps our clients improve the AI performance successfully and rise the productivity of annotating.
+                    </p>
+                    <img src="./img/pj2/SaaS result.png" alt="result" class="w-70% mb-5 ">
+
+
+
+                </div>
+
             </div>
 
 
-        </div>
+                <script>
 
-<script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                        const sliderContainer = document.getElementById('slider-container');
+                        const prevBtn = document.getElementById('prev-btn');
+                        const nextBtn = document.getElementById('next-btn');
+                        const pagination = document.getElementById('pagination');
+                        const paginationBtns = pagination.querySelectorAll('button');
 
-document.addEventListener('DOMContentLoaded', function() {
-  const sliderContainer = document.getElementById('slider-container');
-  const prevBtn = document.getElementById('prev-btn');
-  const nextBtn = document.getElementById('next-btn');
-  const pagination = document.getElementById('pagination');
-  const paginationBtns = pagination.querySelectorAll('button');
-  
-  let currentIndex = 0;
-  const slideCount = sliderContainer.children.length;
-  
-  // 更新轮播位置
-  function updateSlider() {
-    // 移动轮播到当前索引
-    sliderContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
-    
-    // 更新页码指示器
-    paginationBtns.forEach((btn, index) => {
-      if (index === currentIndex) {
-        btn.classList.remove('bg-gray-300');
-        btn.classList.add('bg-gray-900');
-      } else {
-        btn.classList.remove('bg-gray-900');
-        btn.classList.add('bg-gray-300');
-      }
-    });
-  }
-  
-  // 上一张
-  prevBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex - 1 + slideCount) % slideCount;
-    updateSlider();
-  });
-  
-  // 下一张
-  nextBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex + 1) % slideCount;
-    updateSlider();
-  });
-  
-  // 页码点击事件
-  paginationBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      currentIndex = parseInt(btn.dataset.index);
-      updateSlider();
-    });
-  });
-  
+                        let currentIndex = 0;
+                        const slideCount = sliderContainer.children.length;
 
-  
-  // 鼠标悬停时暂停自动轮播
-  sliderContainer.parentElement.addEventListener('mouseenter', () => {
-    clearInterval(autoSlide);
-  });
-  
-  // 鼠标离开时恢复自动轮播
-  sliderContainer.parentElement.addEventListener('mouseleave', () => {
-    autoSlide = setInterval(() => {
-      currentIndex = (currentIndex + 1) % slideCount;
-      updateSlider();
-    }, 5000);
-  });
-});
-</script>
+                        // 更新轮播位置
+                        function updateSlider() {
+                            // 移动轮播到当前索引
+                            sliderContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
 
-    </body>
+                            // 更新页码指示器
+                            paginationBtns.forEach((btn, index) => {
+                                if (index === currentIndex) {
+                                    btn.classList.remove('bg-gray-300');
+                                    btn.classList.add('bg-gray-900');
+                                } else {
+                                    btn.classList.remove('bg-gray-900');
+                                    btn.classList.add('bg-gray-300');
+                                }
+                            });
+                        }
+
+                        // 上一张
+                        prevBtn.addEventListener('click', () => {
+                            currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+                            updateSlider();
+                        });
+
+                        // 下一张
+                        nextBtn.addEventListener('click', () => {
+                            currentIndex = (currentIndex + 1) % slideCount;
+                            updateSlider();
+                        });
+
+                        // 页码点击事件
+                        paginationBtns.forEach(btn => {
+                            btn.addEventListener('click', () => {
+                                currentIndex = parseInt(btn.dataset.index);
+                                updateSlider();
+                            });
+                        });
+
+
+
+                        // 鼠标悬停时暂停自动轮播
+                        sliderContainer.parentElement.addEventListener('mouseenter', () => {
+                            clearInterval(autoSlide);
+                        });
+
+                        // 鼠标离开时恢复自动轮播
+                        sliderContainer.parentElement.addEventListener('mouseleave', () => {
+                            autoSlide = setInterval(() => {
+                                currentIndex = (currentIndex + 1) % slideCount;
+                                updateSlider();
+                            }, 5000);
+                        });
+                    });
+                </script>
+
+</body>
 
 </html>
