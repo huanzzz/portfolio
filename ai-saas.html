@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project: Stock trading app</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" type="text/css" href="./src/styles.css">
+
+
+</head>
+
+<body class="bg-gray-100">
+    <!-- 头图部分 -->
+    <div class="w-full h-[60vh] overflow-hidden">
+        <img src="/img/pj2/SaaS banner.png" alt="Project Header" class="w-full h-full object-cover">
+    </div>
+
+    <!-- 项目信息容器 -->
+    <div class="max-w-6xl mx-auto px-4 py-12">
+        <!-- 项目简介 -->
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+
+            <div class="grid grid-cols-1 md:grid-cols-11 md:gap-0">
+                <!-- Time -->
+                <div class="md:col-span-3 text-center md:text-left">
+                    <h3 class="info-title">Time</h3>
+                    <p class="info-content">Mar 2019 - Aug 2019</p>
+                </div>
+
+                <!-- Diveder-->
+                <div class="hidden md:block md:col-span-1 md:flex justify-center items-center">
+                    <div class="w-px h-16 bg-purple-700"></div>
+                </div>
+
+                <!-- Role -->
+                <div class="md:col-span-3 text-center md:text-left">
+                    <h3 class="info-title">Role</h3>
+                    <p class="info-content">UX design & Product management</p>
+                </div>
+
+                <!-- Diveder -->
+                <div class="hidden md:block md:col-span-1 md:flex justify-center">
+                    <div class="w-px h-16 bg-amber-300"></div>
+                </div>
+
+                <!-- Type -->
+                <div class="md:col-span-3 text-center md:text-left">
+                    <h3 class="info-title">Project type</h3>
+                    <p class="info-content">SaaS Platform / Website</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 项目详细介绍 - 两栏布局 -->
+        <div class="bg-white rounded-lg shadow-md p-8">
+
+            <!-- Overview -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <div class="md:col-span-1">
+                    <h3 class="text-xl font-semibold sticky top-8">Overview</h3>
+                </div>
+                <div class="md:col-span-3">
+                    <p class="detail-content">
+                        Einplus, an AI tech company, provides an AI-Powered customer service SaaS, supporting company
+                        clients with efficient and round-the-clock support. While AI-powered customer service has many
+                        significantly automated aspects, human intervention remains important component of a successful
+                        service. This project is a human-AI collaboration module for optimize AI’s performance, by
+                        annotating data and feedback to fine-tune the AI system.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Background -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+                <div class="md:col-span-1">
+                    <h3 class="detial-title1">Background</h3>
+                </div>
+                <div class="md:col-span-3 space-y-6 mb-5">
+                    <div class="p-0">
+                        <h4 class="detial-title2">How does the chatbot system work?</h4>
+                        <p class="detail-content">
+                            In the era without chatGPT or any large language module(LLM), the language module was
+                            trained with corpus provided by clients’ frequently asked questions(FAQs) and customer
+                            conversation log. We helped clients build their own FAQ knowledge base. If the user asks a
+                            question, then it will go into the Q&A intent to find the most matched corpus.
+                        </p>
+                    </div>
+
+                    <div class="p-0">
+                        <h4 class="detial-title2">Why do we need an annotation system?</h4>
+                        <p class="detail-content">
+                            Annotating on AI conversational text regularly can help keep high quality of the chatbot
+                            service, and evaluate on its performance Measure on how much questions the AI can cover, and
+                            the percentage that it can answer correctly. Also, correcting and continuous update can help
+                            to fine-tuning. When it answers in a wrong way, annotators can teach it the right answer by
+                            pointing to the matching corpus. If the AI can't answer the question because there is no
+                            matching one, people can make up for it in time.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Design Challenge -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+                <!-- Left Column - Section Title -->
+                <div class="md:col-span-1">
+                    <h3 class="detial-title1">Design Challenge</h3>
+                </div>
+
+                <!-- Right Column - Content -->
+                <div class="md:col-span-3 space-y-6 mb-5">
+                    <div class="p-0">
+                        <h4 class="detial-title2">1. Train module with validated corpus data</h4>
+                        <p class="detail-content">
+                            The requirement of training data:<br>
+                            -  avoid conflict and confuse corpus in module training;<br>
+                            -  reduce overly similar questions.
+                        </p>
+                    </div>
+
+                    <div class="p-0">
+                        <h4 class="detial-title2">2. Define the key indicators to measure AI performance</h4>
+                        <p class="detail-content">
+                            Accuracy, recall and precision are the metrics commonly used in machine learning. However,
+                            as a SaaS Service provider, we need make it clear how the AI performances in details — <strong>What
+                            can be improved by AI module, and what should customer service group make more efforts.</strong>
+                        </p>
+
+                        
+                    </div>
+
+                    <div class="p-0">
+                        <h4 class="detial-title2">3. Annotation system modules</h4>
+
+                        <p class="detail-content">
+                            The annotation flow contains 3 main stages:<br>
+                            <strong>Create&Assign task:</strong> The admin create an annotation task, then the system will select samples from conversation log, and assign them to annotators.<br>
+                            <strong>Ansnotation:</strong> Each annotators will take their own task. Admin need to review them, in order to supervise the data are annotated correctly.<br>
+                            <strong>Analyze & Fine-tuning:</strong> The system will calculate the indicators and fine-tuning the module based on the result of annotation.<br>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+</body>
+
+</html>
