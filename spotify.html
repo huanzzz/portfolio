@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project: Spotify This or That</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" type="text/css" href="./src/styles.css">
+
+
+</head>
+
+<body class="bg-gray-100">
+    <!-- 头图部分 -->
+    <div class="w-full h-[60vh] overflow-hidden">
+        <img src="/img/pj3/Spotify banner.png" alt="Project Header" class="w-full h-full object-cover">
+    </div>
+
+    <!-- 项目信息容器 -->
+    <div class="max-w-6xl mx-auto px-4 py-12">
+        <!-- 项目简介 -->
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+
+            <div class="grid grid-cols-1 md:grid-cols-11 md:gap-0">
+                <!-- Time -->
+                <div class="md:col-span-3 text-center md:text-left">
+                    <h3 class="info-title">Time</h3>
+                    <p class="info-content">Oct 2023</p>
+                </div>
+
+                <!-- Diveder-->
+                <div class="hidden md:block md:col-span-1 md:flex justify-center items-center">
+                    <div class="w-px h-16 bg-green-500"></div>
+                </div>
+
+                <!-- Role -->
+                <div class="md:col-span-3 text-center md:text-left">
+                    <h3 class="info-title">Role</h3>
+                    <p class="info-content">UX design & User Research</p>
+                </div>
+
+                <!-- Diveder -->
+                <div class="hidden md:block md:col-span-1 md:flex justify-center">
+                    <div class="w-px h-16 bg-green-500"></div>
+                </div>
+
+                <!-- Type -->
+                <div class="md:col-span-3 text-center md:text-left">
+                    <h3 class="info-title">Project type</h3>
+                    <p class="info-content">Mobile application</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 项目详细介绍 - 两栏布局 -->
+        <div class="bg-white rounded-lg shadow-md p-8">
+
+            <!-- Overview -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <div class="md:col-span-1">
+                    <h3 class="text-xl font-semibold sticky top-8">Overview</h3>
+                </div>
+                <div class="md:col-span-3">
+                    <p class="detail-content">
+                        Using a few simple interactive steps, assist users in discovering music that better aligns with
+                        their preferences and feelings.
+                </div>
+            </div>
+
+            <!-- Background -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+                <div class="md:col-span-1">
+                    <h3 class="detial-title1">Background</h3>
+                </div>
+                <div class="md:col-span-3 space-y-6 mb-5">
+                    <div class="p-0">
+
+                        <p class="detail-content">
+                            Spotify uses machine learning to serve music and podcasts to its users in various
+                            personalized ways with Signals, like: Discover Weekly, Daylist, Algotorial playlists, AI DJ
+                        </p>
+
+                        <p class="text-green-500 detail-content">
+                            <strong>Signals</strong> are ways for platforms to understand what users enjoy, what they
+                            want more of, and what they don't want to see.
+                        </p>
+
+                        <p class="detail-content">
+                            How might Spotify better serve music discovery behaviors using AI on new or existing
+                            surfaces based on both implicit and explicit signals?
+                        </p>
+
+                        <p class="text-green-500 detail-content">
+                            <strong>Explicit Signals.</strong> These are signals that are given directly from the user
+                            to the platform. Much of the time, they manifest as UI elements indicating liking or
+                            disliking something.
+                        </p>
+
+                        <p class="text-green-500 detail-content">
+                            <strong>‍Implicit Signals.</strong> These signals that are gathered by a platform either
+                            through demographic data or are behaviors and motivations slowly uncovered over time of
+                            usage.
+                        </p>
+
+
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- Design Process -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+                <!-- Left Column - Section Title -->
+                <div class="md:col-span-1">
+                    <h3 class="detial-title1">Design Process</h3>
+                </div>
+
+                <!-- Right Column - Content -->
+                <div class="md:col-span-3 space-y-6 mb-5">
+                    <!-- User Research -->
+                    <div class="p-0">
+                        <!-- Subsection Title -->
+                        <h4 class="detial-title2">User Research</h4>
+
+                        <!-- Main Content -->
+
+                        <div class=" mb-4">
+                            <img src="img/pj3/spotify-problems.png" alt="information structure" class="w-full mb-5">
+                        </div>
+                        <p class="detail-content">
+                            I gathered the problems and feelings people usually have with Spotify and grouped them.
+                        </p>
+
+                        <div class="container mx-auto px-20">
+                            <p class="detail-content">
+                                <strong>Insight:</strong> <br>
+                                Spotify makes a recommendation they won't listen to -- they feel: doubt about it
+                                because:
+                                they don't know what it's based on
+                            </p>
+                            <img src="img/pj3/arrow.png" alt="arrow" class="h-20 mx-auto">
+                            <p class="text-xl text-green-500 detail-content">
+                                <strong>HMW </strong> make recommendations be more reliable?
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Ideation -->
+                    <div class="p-0">
+                        <!-- Subsection Title -->
+                        <h4 class="detial-title2">Ideation</h4>
+
+                        <!-- Main Content -->
+
+
+                        <p class="detail-content">
+                            We had a brainstorm to generate ideas <br>
+                            - Combine the Explicit Signals and Implicit Signals <br>
+                            - User can be aware of the signal, knowing how it comes.
+                        </p>
+
+                        <div class=" mb-4">
+                            <img src="img/pj3/brainstorm.png" alt="information structure" class="w-full mb-5">
+                        </div>
+
+                        <div class="">
+                            <p class="detail-content">
+                                Ask users to pick up 3 choices they like --  <strong>This or That!</strong> <br>
+                                The user will be asked to
+                                make a choice in a second, then the answers are used as explicit signals in recommend
+                                music.
+                            </p>
+                        
+                            <p class="text-xl text-green-500 text-center detail-content">
+                                Do you like Cat or Dog?<br>
+                                Do you want to relax in the City or Nature?<br>
+                                Are you feeling Happy or Sad?<br>
+                                ...
+                            </p>
+                        </div>
+                    </div>
+
+
+
+                    <!-- Data Service -->
+                    <div class="p-0">
+                        <!-- Subsection Title -->
+                        <h4 class="detial-title2">Data Service</h4>
+
+                        <!-- Main Content -->
+                        <p class="detail-content">
+                            How to assist investors to make smart decisions?In our user research, we have identified
+                            that novice investors often lack professional financial knowledge, leading to uncertainty
+                            about how to analyze a stock. Faced with complex financial charts and data, they frequently
+                            experience anxiety and struggle to comprehend the significance of these numbers. ‍
+                        </p>
+
+                        <h5 class="detial-title4">Stock price chart</h5>
+                        <div class="flex flex-col md:flex-row">
+                            <!-- 左侧文字列 -->
+                            <div class="w-full md:w-1/2 p-4">
+                                <p>Stock trading apps commonly presents candlestick charts. However, for novice
+                                    investors and those uninterested in short-term price fluctuations, don't like to
+                                    read the complex chart. So, I've introduced a simplified line chart that focuses
+                                    solely on illustrating the trend in stock price movements. And the types of chart
+                                    can be easily switched.</p>
+                            </div>
+                            <!-- 右侧图片列 -->
+                            <div class="w-full md:w-1/2 p-4 flex items-center justify-center">
+                                <img src="img/pj1/switch.gif" alt="switch" class="w-2/3 h-auto ">
+                            </div>
+                        </div>
+
+                        <h5 class="detial-title4">Stock Rating</h5>
+
+                        <p class="detail-content">
+                            Our aim is to assist investors in establishing sound investment practices. To achieve this,
+                            we have developed a straightforward and user-friendly stock analysis model by knowing:
+                        </p>
+
+                        <p class="flex justify-center font-bold italic text-orange-300">
+                            How is the company? <br>Is it worth to invest in this price?<br> What should I be cautious?
+
+                        <div class="w-full p-4 flex items-center justify-center">
+                            <img src="img/pj1/Stock rating.png" alt="Stock rating" class="w-full h-auto ">
+                        </div>
+
+                        <h5 class="detial-title4">Stock Rating Details</h5>
+                        <p class="detail-content">
+                            The <strong>radar chart</strong> is used to clearly present the detailed analysis process
+                            and data, enabling
+                            users to understand the analytical method of the ratings.
+                        </p>
+
+
+
+                        <div class="w-full p-0 flex items-center justify-center">
+                            <img src="img/pj1/Radar.png" alt="radar" class="w-full h-auto ">
+                        </div>
+
+
+                        <!-- blank divider -->
+                        <div class="mb-10"> </div>
+
+
+                        <!-- Visualization & Interaction -->
+                        <div class="md:col-span-3 space-y-6 mb-5">
+                            <!-- Research Subsection Template -->
+                            <div class="p-0">
+                                <!-- Subsection Title -->
+                                <h4 class="detial-title2">Visualization & Interaction</h4>
+
+                                <!-- Main Content -->
+                                <p class="detail-title3">
+                                    Color
+                                </p>
+
+                                <!-- Optional Image -->
+                                <div class="mt-4 mb-4">
+                                    <img src="./img/pj1/Color.png" alt="{color}" class="w-full mb-5">
+                                </div>
+
+                                <div class="mb-10">
+                                </div>
+
+                                <p class="detail-title3">
+                                    Interactions
+                                </p>
+
+                                <!-- 三列布局容器 -->
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                                    <!-- 第一列 -->
+                                    <div class="mb-8 md:mb-0 ">
+                                        <h3 class="detail-title4 text-center">Gestures on Stock Charts</h3>
+                                        <p class="mb-4">Sliding&Zooming - show detailed or general </p>
+                                        <img src="./img/pj1/zoom.gif" alt="sliding"
+                                            class="mx-auto w-5/6 rounded-lg shadow-md">
+                                    </div>
+
+                                    <!-- 第二列 -->
+                                    <div class="mb-8 md:mb-0">
+                                        <h3 class="detail-title4 text-center">Toggle details</h3>
+                                        <p class="mb-4 text-center">Toggle more information</p>
+                                        <img src="./img/pj1/interaction2.gif" alt="toggle"
+                                            class="mx-auto w-5/6 rounded-lg shadow-md">
+                                    </div>
+
+                                    <!-- 第三列 -->
+                                    <div class="mb-8 md:mb-0">
+                                        <h3 class="detail-title4 text-center">Highlight</h3>
+                                        <p class="mb-4 text-center">Tap for more info</p>
+                                        <img src="./img/pj1/interaction3.gif" alt="描述3"
+                                            class="mx-auto w-5/6 rounded-lg shadow-md">
+                                    </div>
+
+                                </div>
+
+                                <div class="mb-10">
+                                </div>
+
+                                <div class="p-0">
+                                    <!-- Subsection Title -->
+                                    <h4 class="detial-title2">Design for Emotion</h4>
+
+                                    <div class="flex flex-col md:flex-row">
+                                        <!-- 左侧文字列 -->
+                                        <div class="w-full md:w-1/2 p-4">
+                                            <p>Stock investments carry high risks, and emotions can be influenced by
+                                                price changes. Addressing negative sentiments during market downturns is
+                                                crucial to supporting users.</p>
+                                        </div>
+                                        <!-- 右侧图片列 -->
+                                        <div class="w-full md:w-1/2 p-4 flex items-center justify-center">
+                                            <img src="img/pj1/heartandboom.gif" alt="heartandboom"
+                                                class="w-5/6 h-auto ">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!-- Result -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+                <!-- Left Column - Section Title -->
+                <div class="md:col-span-1">
+                    <h3 class="detial-title1">Result</h3>
+                </div>
+
+                <!-- Right Column - Content -->
+                <div class="md:col-span-3 space-y-6 mb-5">
+                    <!-- Research Subsection Template -->
+
+                    <!-- Main Content -->
+                    <p class="detail-content">
+                        After launching the APP, we gained huge succeed among young investors. The concise user
+                        interface and simplified data analysis module are the key modules attracting them.
+                    </p>
+
+                    <!-- Optional Image -->
+                    <div class="mt-4 mb-4">
+                        <img src="./img/pj1/result.png" alt="result" class="w-full mb-5">
+                    </div>
+
+                    <div class="m-10">
+                        <p class="font-bold italic text-xl text-yellow-400 text-center">
+                            " I like to view the stock ratings in investing."<br>"
+                            With similar transaction fees, I prefer investing in stocks on this app. "<br>"
+                            I enjoy a pleasant mood when making investments."<br>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
